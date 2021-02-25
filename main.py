@@ -1,7 +1,7 @@
 import os
 import json
 import time
-import requests
+import requests 
 from bs4 import BeautifulSoup
 
 USERNAME = os.environ["USERNAME"]
@@ -34,7 +34,7 @@ def login(username, password) -> (str, requests.session):
     # print(f.request.url)
     sess_id = f.request.url[f.request.url.index('=') + 1:len(f.request.url)]
     return sess_id, session
-
+  
 
 def get_servers(sess_id, session) -> {}:
     d = {}
